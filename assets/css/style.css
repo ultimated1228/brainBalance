@@ -1,0 +1,659 @@
+/* using Bulma CSS framework */
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
+
+/* Fonts */
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-Black.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-BoldItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis Extra';
+    src: url('./fonts/metropolis/Metropolis-ExtraBold.woff2') format('woff2'),
+        url('./fonts/metropolis/Metropolis-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-Bold.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-BlackItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-BlackItalic.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-Medium.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis Extra';
+    src: url('../fonts/metropolis/Metropolis-ExtraBoldItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-Light.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis Extra';
+    src: url('../fonts/metropolis/Metropolis-ExtraLightItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-ExtraLightItalic.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis Extra';
+    src: url('../fonts/metropolis/Metropolis-ExtraLight.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-ExtraLight.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-LightItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-ExtraLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-MediumItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-RegularItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-RegularItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis Semi';
+    src: url('../fonts/metropolis/Metropolis-SemiBold.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-ThinItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-Regular.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis';
+    src: url('../fonts/metropolis/Metropolis-Thin.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Metropolis Semi';
+    src: url('../fonts/metropolis/Metropolis-SemiBoldItalic.woff2') format('woff2'),
+        url('../fonts/metropolis/Metropolis-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+/* end fonts */
+
+:root {
+
+    --main-green: rgb(180, 207, 77);
+    --main-blue: #003760;
+    --main-orange: #ffc300;
+    --main-teal: rgba(0, 187, 199, 1)
+}
+
+Body {
+    font-family: 'Metropolis Semi';
+    --nav-height: 50px;
+}
+
+header {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+button {
+    font-family: 'Metropolis Semi';
+    font-size: clamp(12px, 1.3vw, 20px);
+    font-weight: bold;
+    background-color: var(--main-green);
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    max-width: 200px;
+}
+
+button:hover {
+    color: var();
+    box-shadow: 300px 0 0 0 rgba(0, 0, 0, 0.25) inset, -300px 0 0 0 rgba(0, 0, 0, 0.25) inset;
+    cursor: pointer;
+    transition: all 1.5s, color 0.3s 0.3s;
+}
+
+
+#headerTop {
+    display: flex;
+    border-bottom: 1px rgba(0, 0, 0, 0.15) solid;
+    align-items: center;
+    height: var(--nav-height);
+    width: 95%;
+    transition: transform 0.2s;
+    background-color: white;
+    margin: 0;
+    gap: 10px;
+}
+
+.headerTop--hidden {
+    transform: translateY(calc(-1 * var(--nav-height)));
+    box-shadow: none;
+    padding: 0px;
+    margin: 0px;
+    display: none;
+}
+
+.headerTopItem {
+    font-size: clamp(11px, 1.3vw, 20px);
+    display: flex;
+    justify-content: flex-end;
+    color: #003760;
+    padding: 0;
+    align-items: center;
+    transition: .75s;
+}
+
+.headerTopItem:hover {
+    color: var(--main-teal)
+}
+
+#headerBottom {
+    display: flex;
+    align-items: center;
+    height: var(--nav-height);
+    width: 95%;
+    margin-bottom: 10px;
+    border-bottom: 1px rgba(0, 0, 0, .15) solid;
+    margin-top: 5px;
+    padding: 0px;
+    z-index: 3;
+
+}
+
+.headerBottomAfter {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    height: var(--nav-height);
+    width: 100%;
+    background-color: white;
+    border-bottom: 0px;
+    filter: drop-shadow(0px 5px 4px grey);
+    padding: 40px 35px 30px;
+    z-index: 3;
+}
+
+#headerLogo {
+    min-width: 200px;
+    max-width: 300px;
+    width: 20%;
+}
+
+.headerBottomMiddle {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+}
+
+#headerBottomRight {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.headerBottomRightItem {
+    min-width: 150px;
+}
+
+#heroShowHide {
+    width: 100%;
+}
+
+#heroImage {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+
+}
+
+.heroTextContainer {
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    text-align: left;
+    position: absolute;
+    top: 115px;
+    left: 4vw;
+    z-index: 2;
+    font-size: clamp(14px, 2vw, 40px);
+}
+
+#heroText {
+    width: 50%;
+}
+
+#activitiesList {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--main-teal);
+    color: white;
+    width: 100%;
+    border-bottom-left-radius: 60% 2vw;
+    border-bottom-right-radius: 60% 2vw;
+    min-height: 500px;
+    padding-bottom: 40px;
+}
+
+.activitiesHead {
+    background-color: white;
+    color: var(--main-blue);
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    flex: 0 0 auto;
+}
+
+.weekTitle1 {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    line-height: 3rem;
+    padding-top: 10px;
+}
+
+.weekTitle2 {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    line-height: 3rem;
+}
+
+.activityCardAlign {
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    margin: 0 auto !important;
+    flex-wrap: wrap;
+
+}
+
+.activityListMainContainer {
+    display: flex;
+    text-align: center;
+    background-color: white;
+    color: var(--main-blue);
+    width: 90%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 6px
+}
+
+.activityListContainer {
+    display: flex;
+    background-color: var(--main-orange);
+    width: 100%;
+    border-radius: 10px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+/* TO DO: need to make this 1/3 at m screen and flex column at small screen.  Looks good as is down to 880px.*/
+.activityCard{
+    display:flex;
+    flex-direction: column;
+    max-width: 200px; 
+    height: 250px;
+    z-index: 0;
+}
+
+.activityCardHeader {
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
+    padding: 5px;
+    margin: 0 auto;
+    background-color: var(--main-blue);
+    color: white;
+    border-radius: 5px;
+    width:95%;
+}
+
+.activityContent {
+    font-size: clamp(12px, 1vw, 16px);
+    margin: 0 0 8px 0;
+    padding: 2px;
+    height: 130px;
+    overflow: auto;
+}
+
+.card-footer {
+    height: 45px;
+}
+
+.cardFooterButton {
+    margin: 7px;
+}
+
+.divider {
+    width: 85%;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+#resourcesContainer {
+    display: flex;
+    text-align: center;
+    background-color: rgb(230, 229, 229);
+    color: var(--main-blue);
+    width: 90%;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    padding: 6px;
+    margin: 0 auto;
+}
+
+.resourcesTitle {
+    background-color: white;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+    text-align: center;
+    font-size: 40px;
+    line-height: 50px;
+}
+
+#resourcesContent {
+    width: 100%;
+    background-color: white;
+    margin: 6px 0px 0px 0px;
+    border-radius: 0px 0px 5px 5px;
+}
+
+.resourcesLeft {
+
+    text-align: left;
+    border-radius: 0px 0px 0px 5px;
+}
+
+.resourcesLeftHeader {
+    font-size: clamp(16px, 2.25vw, 20px);
+    margin-top:75px;
+}
+
+.dividerResourcesLeft {
+    border: 2px solid var(--main-teal);
+    background-color: var(--main-teal);
+    border-radius: 2px;
+    margin: 0;
+    width: 25%;
+    margin-top: 5px;
+}
+
+.resourcesList {
+    margin-top: 5px;
+    transition: all 2s ease-in-out;
+}
+
+.resourcesLi {
+    padding: 5px;
+}
+
+.resourcesListLinks {
+    font-family: Metropolis;
+    color: var(--main-blue);
+    transition: .75s;
+}
+
+.resourcesListLinks:hover {
+    color: var(--main-orange);
+}
+
+.resourcesRight {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    border-radius: 0px 0px 5px 0px;
+}
+
+#videoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 5px 0px;
+    border-left: 3px solid var(--main-teal);
+    border-right: 3px solid var(--main-teal);
+    border-radius: 5px;
+}
+
+#youtubeHeader {
+    align-items: center;
+    font-size: clamp(16px, 2.25vw, 20px);
+    border-radius: 5px;
+    font-weight: bold;
+    width: 60%
+}
+
+.dividerYoutube {
+    margin-top: 5px;
+    border: 2px solid var(--main-teal);
+    background-color: var(--main-teal);
+    border-radius: 2px;
+    margin: 0;
+    width: 75%;
+}
+
+#searchAlign {
+    margin-top: 5px;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.youtubeSearch {
+    width: 35%;
+    height: 30px;
+}
+
+#youtubeSearchButton {
+    width: 20%;
+    height: 30px;
+    font-size: clamp(12px, 1.5vw, 16px);
+}
+
+
+
+#footerMain {
+    position: relative;
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    margin-top: -15px;
+    height: 65px;
+    text-align: center;
+    background-color: var(--main-blue);
+    color: white;
+    z-index: 0;
+    margin-top: 1px;
+}
+
+#footerInvert {
+    position: absolute;
+    background-color: white;
+    height: 15px;
+    border-bottom-left-radius: 60% 2vw;
+    border-bottom-right-radius: 60% 2vw;
+    margin-top: 3px;
+    z-index: 1;
+    right: 0;
+    left: 0;
+    bottom: 77%;
+
+}
+
+.footerContents {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-top: 15px;
+}
+
+#footerLink {
+    text-decoration: none;
+    height: 35px;
+    fill: white;
+}
+
+.headerTopImageSize{
+    height:25px;
+}
+
+@media screen and (max-width: 875px){
+
+    .headerTopItem{
+        height:10px;
+        
+    }
+} 
+
+@media screen and (max-width: 600px){
+    .headerBottomRightItem{
+        margin-bottom: 5px;
+    }
+
+    #headerBottom{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height:auto;
+    }
+
+    .headerBottomAfter{
+        flex-direction: column;
+        justify-content: center;
+        height:100px;
+    }
+
+    .bbLogo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .heroTextContainer{
+        position: relative;
+        top:10px;
+        width: 100%;
+        line-height: 1.25;
+
+
+    }
+
+    .resourcesLeftHeader{
+        margin-top: 5px;
+    }
+
+}

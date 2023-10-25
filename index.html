@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CDN for Bulma framework -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <!-- end CDN for Bulma framework -->
+
+  <title>Brain Balance Checklist</title>
+
+</head>
+
+<body>
+  <header>
+    <section id="headerTop" class="columns">
+      <a href="tel:+18008775500" alt="Call 800.555.5500" class="column is-offset-half  headerTopItem"><img
+          src="./assets/imgs/phone-removebg-preview.png" class="headerTopImageSize" alt="phone"
+          style="margin-right: 7px">800.555.5500</a>
+      <a href="https://www.brainbalancecenters.com/locations" alt="Find a Location" target="_blank"
+        class="column headerTopItem"><img src="./assets/imgs/location-removebg-preview.png" alt="Find a Location" class="headerTopImageSize" 
+          style="margin-right: 7px">FIND A CENTER</a>
+      <a href="https://franchise.brainbalancecenters.com/?_ga=2.144629621.1950756010.1694062172-577801165.1693940524&_gac=1.53616986.1693940524.CjwKCAjwo9unBhBTEiwAipC114DdKDgTsufQHQpVkQIWUXQChHEiDLWLDjMi-cB0919OZjJvqp7YSxoCFYEQAvD_BwE"
+        alt="own a franchise" target="_blank" class="column headerTopItem">
+        <img src="./assets/imgs/ownFranchise-removebg-preview.png" alt="own a center"
+          style="margin-right: 7px" class="headerTopImageSize">
+        <p>OWN A CENTER</p>
+      </a>
+
+
+    </section>
+  
+    <section id="headerBottom" class="columns">
+      <div class="column is-one-third bbLogo"><img src="./assets/imgs/BBLogo.png" alt="Brain Balance Logo" id=headerLogo></div>
+      <div class="column">
+        <div class="columns" id="headerBottomRight">
+          <button class="column headerBottomRightItem js-modal-trigger" data-target="username-modal" id="username">UserName</button>
+          <button class="column headerBottomRightItem js-modal-trigger" data-target="week-modal" id='pickWeek'>Pick Week</button>
+        </div>
+      </div>
+
+    </section>
+
+  </header>
+    <main>
+
+
+      <section id="activitiesList">
+        <div id="heroShowHide">
+          <div class="heroTextContainer">
+            <h1 id="heroText">Welcome!
+              <br><br>
+              Use the buttons on the top right to pick a week or choose your username.
+              <br><br>
+              A list of activities to complete each day will appear!
+            </h1>
+
+          </div>
+
+          <img src="./assets/imgs/hero.png" id="heroImage">
+        </div>
+        <div class="activitiesHead" style="display: none">
+          <h2 class="weekTitle1">Activities</h2>
+          <div id="titleUserInfo" class="headerBottomMiddle column"></div>
+        </div>
+        <!-- possible Ul to Li dynamic generate -->
+        <div class="activityListMainContainer" style="display: none">
+          <div class="activityListContainer">
+            <div class="activityCardAlign columns">
+
+              <!-- all dynamically generated cards should have a class of "column is-3" -->
+              
+            </div>
+          </div>
+        </div>
+
+        <hr class="divider">
+
+        <section id="resourcesContainer">
+          <h2 class="resourcesTitle">Resources</h2>
+          <div class="columns" id="resourcesContent">
+            <div class="column resourcesLeft is-2">
+              <h2 class="resourcesLeftHeader">Program Links</h2>
+              <hr class="dividerResourcesLeft">
+              <ul class="resourcesList">
+                <li class="resourcesLi"><a
+                    href="https://www.brainbalancecenters.com/blog/how-does-the-brain-balance-program-work"
+                    target="_blank" class="resourcesListLinks">How It Works</a></li>
+                <li class="resourcesLi"><a href="https://www.brainbalancecenters.com/our-program" target="_blank"
+                    class="resourcesListLinks">Program Overview</a></li>
+                <li class="resourcesLi"><a
+                    href="https://www.brainbalancecenters.com/our-program/childs-personalized-plan" target="_blank"
+                    class="resourcesListLinks">Personalized Plan</a></li>
+                <li class="resourcesLi"><a
+                    href="https://www.brainbalancecenters.com/brain-balance-program-research-and-results"
+                    target="_blank" class="resourcesListLinks">Research</a></li>
+                <li class="resourcesLi"><a href="https://www.brainbalancecenters.com/brain-balance-virtual-program"
+                    target="_blank" class="resourcesListLinks">Virtual Program</a></li>
+                <li class="resourcesLi"><a href="https://www.brainbalancecenters.com/online-assessment" target="_blank"
+                    class="resourcesListLinks">Online Quiz</a></li>
+              </ul>
+            </div>
+            <div class="column is-10 resourcesRight">
+              <h1 id="youtubeHeader">Search Our Youtube Channel</h1>
+              <hr class="dividerYoutube">
+              <div id="searchAlign">
+                <input class="youtubeSearch" type="text" id="searchInput" placeholder="Enter keywords...">
+                <button id="youtubeSearchButton" onclick="searchVideos()">Search</button>
+              </div>
+              <div id="videoContainer" class="columns"></div>
+
+              <div id="pagination">
+                <button onclick="previousPage()">Previous</button>
+                <span id="pageInfo">Page 1</span>
+                <button onclick="nextPage()">Next</button>
+              </div>
+
+            </div>
+          </div>
+
+        </section>
+
+      </section>
+
+
+    </main>
+
+    <footer id="footerMain">
+      <div id="footerInvert"></div>
+      <div class="footerContents">
+        <h3>Made by Adrian C, Steve M, and Kyle E.</h3>
+        <a href="https://github.com/kyleochata/Project-1-SAK" alt="Link to github repo" target="_blank"><img src="./assets/imgs/GitHub-logo.png" alt="Github logo"  id="footerLink" ></a>
+      </div>
+
+    </footer>
+
+    <!-- username modal -->
+    <div id="username-modal" class="modal">
+      <div class="modal-background"></div>
+
+      <div class="modal-content">
+        <div class="box">
+          <div class="labelContainer">
+            <label>Please Select a UserName:</label>
+          </div>
+
+          <div class="select">
+            <select id="usernameSelect"></select>
+          </div>
+          <button class="closeButton" id="closeSelectButton">OK</button>
+        </div>
+      </div>
+
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <!-- week select modal -->
+    <div id="week-modal" class="modal">
+      <div class="modal-background"></div>
+
+      <div class="modal-content">
+        <div class="box">
+          <div class="labelContainer">
+            <label>Please Select a Week:</label>
+          </div>
+
+          <div class="select">
+            <select id="week">
+            </select>
+          </div>
+          <button class="closeButton">OK</button>
+        </div>
+      </div>
+
+      <button class="modal-close is-large" aria-label="close"></button>
+    </div>
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U=" crossorigin="anonymous"></script>
+    <script src="./assets/JS/script.js"></script>
+
+</body>
+
+</html>
