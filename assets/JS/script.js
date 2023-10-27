@@ -359,34 +359,25 @@ document.querySelectorAll('.closeButton').forEach(function (button) {
 
 
 
-function generateWeekSelect() {
-    // Find the maximum week value from your data
-    const maxWeek = Math.max(...masteractivityList.map(item => parseInt(item.weeks)));
-    
-    // Delete all existing weeks
-    document.querySelectorAll('.weeksOption').forEach((element) => {
-        element.remove();
-    });
-
-    let selectWeekEl = document.getElementById('week');
-    for (let i = 1; i <= maxWeek; i++) {
-        let optionEl = document.createElement('option');
-        optionEl.setAttribute("class", "weeksOption");
-        optionEl.setAttribute('value', "week" + i);
-        optionEl.textContent = i;
-        selectWeekEl.appendChild(optionEl);
-    }
-}
-
-generateWeekSelect();
-
-document.getElementById('week').addEventListener('change', function () {
-    const selectedWeek = parseInt(this.value); // Parse the selected week as an integer
-    renderData(masteractivityList, selectedWeek);
-});
-
 let heroRemoved = false;
 const usernameModal = document.getElementById('username-modal');
+
+// Create a Mutation Observer
+const observer = new MutationObserver(mutationsList => {
+    for (const mutation of mutationsList) {
+        if (mutation.type === 'attributes' && mutation.attributeName === 'class' && !mutation.target.classList.contains('is-active')) {
+            // Class attribute has been changed
+            const targetElement = mutation.target;
+            const weeks = update_usernames();
+            renderData(masteractivityList, weeks, null);
+            if (heroRemoved == false)
+            {
+                document.getElementById('heroShowHide').remove();
+                heroRemoved = true;
+            }
+        }
+    }
+});
 
 const config1 = { attributes: true, attributeFilter: ['class'] };
 observer.observe(usernameModal, config1);
@@ -493,6 +484,22 @@ var renderRestOfCards = (restOfObject) => {
 }
 
 
+// Function to change the class of the watched element
+function update_usernames() {
+    const name = document.getElementById('usernameSelect').value;
+    const index = namesList.findIndex(user => user.userName.includes(name));
+    let now = dayjs();
+    let userDate;
+    if (index !== -1) {
+        userDate = dayjs(namesList[index].startDate);
+    } else {
+        alert("no user found");
+    }
+    const weeksDifference = now.diff(userDate, 'week');
+    generateWeekSelect(weeksDifference);
+    return weeksDifference;
+}
+
 function generateWeekSelect(weeks) {
     // delete all existing weeks
     document.querySelectorAll('.weeksOption').forEach((element) => {
@@ -516,5 +523,3 @@ function generateWeekSelect(weeks) {
         selectWeekEl.appendChild(optionEl);
     }
 }
-
-
